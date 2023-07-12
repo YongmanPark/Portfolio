@@ -18,6 +18,10 @@ body {
     margin: 0;
 }
 
+h1,h2,h3,h4,p,ul {
+    margin: 0;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -81,6 +85,11 @@ a{
 
 .header_menu_item:hover{
     border-bottom: 1px solid var(--color-white);
+}
+
+.header--dark{
+    background-color: var(--color-black);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
 
 /* Home */
@@ -148,7 +157,9 @@ a{
 
 /* About */ 
 #about {
-    padding-top : 0;   
+    padding-top : 0;  
+    transition: all 500ms ease;
+
 }
 
 .about_container {
@@ -161,21 +172,14 @@ a{
     border-radius: 10%;
 }
 
-.abouts_right {
+.abouts_content {
     text-align: left;
 }
 
-/* Work */
-#work {
-    background-color: var(--color-gray);
-    color: var(--color-white);
-} 
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1rem;
+.abouts_right{
+    border: 1px solid rgb(248, 244, 244);
+    width: 100%;
+    border-radius: 10%;
 }
 
 .about_title:after {
@@ -185,6 +189,24 @@ a{
     border-bottom: 1px solid var(--color-black);
     margin: 10px auto;
   }
+
+.abouts_title {
+   padding-bottom: 10px;
+   text-decoration: underline; 
+} 
+
+.abouts_content {
+    padding: 16px;
+}
+
+
+/* Work */
+
+#work {
+    background-color: var(--color-gray);
+    color: var(--color-white);
+} 
+
 
 /* Project*/
 
@@ -199,6 +221,13 @@ a{
     border-bottom: 1px solid #bcbcbc;
     margin: 10px auto;
   }
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
 
 /* Skills */
 .skills_title:after {
